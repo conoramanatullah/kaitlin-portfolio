@@ -30,15 +30,10 @@ gulp.task('serve', ['browserSync', 'sass'] ,function(){
   gulp.watch('app/js/**/*.js', browserSync.reload);
   // gulp.watch('app/js/app.js', ['babel']);
 });
-// gulp.task('babel', function(){
-//   return gulp.src('app/js/app.js')
-//     .pipe(babel({
-//       presets: ['es2015']
-//     }))
-//     .pipe(gulp.dest('dist'));
-// });
+
 gulp.task('browserSync', function() {
   browserSync.init({
+    open: false,
     server: {
       baseDir: './'
     },

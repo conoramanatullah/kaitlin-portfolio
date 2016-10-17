@@ -1,3 +1,6 @@
-"use strict";
+'use strict';
 
-(function () {})();
+(function () {
+  var Portfolio = angular.module('Portfolio', ['ngMaterial']);
+  console.log(Portfolio);
+})();

@@ -2,32 +2,72 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- ***************************************** -->
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="css/styles.css">
     <!--endbuild-->
+    <!-- ***************************************** -->
 
     <title>Portfolio</title>
 
 
   </head>
-  <body>
+  <body ng-app="Portfolio">
+    <!-- ***************************************** -->
+    <div id="Portfolio" ng-controller="MainController">
+      <div class="portfolio-header md-whiteframe-z3" layout="row">
+        <div class="header-logo">logo</div>
+        <div flex></div>
+        <div class="header-content" layout="row" flex>
+          <span flex="33">About</span>
+          <span flex="33">Work</span>
+          <span flex="33">Contact</span>
+        </div>
+      </div>
+      <div class="portfolio-body">
+        <div class="body-content">
 
-    <div class="ayylmao">
-      hey whats up fam
+        </div>
+      </div>
+      <div class="portfolio-footer md-whiteframe-z1">
+        <div class="footer-content" layout="row">
+          <div class="content-left" flex="33">
+            left
+          </div>
+          <div class="content-center" flex="33">
+            center
+          </div>
+          <div class="content-right" flex="33">
+            right
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
     </div>
-
-
-
+    <!-- ***************************************** -->
     <!--build:js js/main.min.js  -->
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-messages/angular-messages.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="js/app.js"></script>
     <!-- endbuild -->
+    <!-- ***************************************** -->
+
+
   </body>
 </html>

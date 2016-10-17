@@ -9,7 +9,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
-// var babel = require('gulp-babel');
+var babel = require('gulp-babel');
 
 gulp.task('hello', function() {
   console.log('hello  ayy lmao')
@@ -43,7 +43,7 @@ gulp.task('browserSync', function() {
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
+    // .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('public'))
 });
@@ -68,6 +68,14 @@ gulp.task('clean:public', function(){
 gulp.task('cache:clear', function (callback) {
   return cache.clearAll(callback)
 })
+
+// gulp.task('babel', function(){
+//   return gulp.src('app/js/app.js')
+//       .pipe(babel({
+//         presets: ['es2015']
+//       }))
+//       .pipe(gulp.dest('babel_cache'));
+// })
 
 gulp.task('default', function (callback) {
 
